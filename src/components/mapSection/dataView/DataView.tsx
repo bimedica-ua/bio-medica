@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { MapLocation } from '@/constants';
 
 function renderAddress(address: string) {
-  return address.split('\n').map((line, index) => (
+  return address.split('\\n').map((line, index) => (
     <Fragment key={index}>
       {line}
       <br />
