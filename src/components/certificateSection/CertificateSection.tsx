@@ -19,7 +19,7 @@ function CertificateSection() {
     <section className=" bg-firstColor my-10">
       <div className="max-w-containerWidth mx-auto flex flex-col gap-4 px-3 py-10">
         <div className="flex flex-col items-start gap-2">
-          <h1 className="text-xl font-bold">Ліцензії та сертифікати</h1>
+          <h1 className="text-xl font-bold">Ліцензії, сертифікати та обладнання</h1>
           <ToggleButton isChecked={isShowAll} onToggle={setIsShowAll}>
             Дивитись всі
           </ToggleButton>
@@ -28,7 +28,7 @@ function CertificateSection() {
           <div className="text-center w-full">Завантаження сертифікатів...</div>
         )}
         {cards.Certificates.length > 0 && (
-          <article className="grid grid-cols-2 md:grid-cols-4 gap-5 justify-center items-center">
+          <article className="grid grid-cols-2 md:grid-cols-4 gap-5 justify-center">
             {(isShowAll
               ? cards.Certificates
               : cards.Certificates.slice(0, 4)

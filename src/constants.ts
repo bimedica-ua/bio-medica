@@ -39,6 +39,7 @@ type MyData = {
   cardHolder: CardType;
   pages: page[];
   imagesForSlider: ImageForSlider[];
+  mail:string;
   phones: string[];
   map: Record<string, MapLocation[]>;
   socials: Social[];
@@ -104,12 +105,11 @@ export const CONSTANTS: MyData = {
         'https://nikolab.com.ua/wp-content/uploads/2022/09/slide2-min.jpg.webp',
     },
   ],
-  phones: ['+38(096) 201 23 45', '+38(090) 123 12 33'],
+  mail: 'biomedica.zp@gmail.com',
+  phones: ['+380 95 157 87 77'],
   socials: [
     { name: 'facebook', url: 'https://facebook.com', icon: faFacebook },
     { name: 'instagram', url: 'https://instagram.com', icon: faInstagram },
-    { name: 'telegram', url: 'https://telegram.com', icon: faTelegram },
-    { name: 'twitter', url: 'https://instagram.com/', icon: faXTwitter },
   ],
   map: {
     'м. Запоріжжя': [

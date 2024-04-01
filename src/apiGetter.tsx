@@ -112,7 +112,7 @@ interface StoryData {
 
 export const transformSocials = (
   data: StoryData
-): { phones: string[]; socials: Social[] } => {
+): { mail:string, phones: string[]; socials: Social[] } => {
   const {
     email,
     phone1,
@@ -122,13 +122,14 @@ export const transformSocials = (
     telegramUrl,
     twitterUrl,
   } = data;
+  const mail = email;
   const phones = [phone1, phone2];
   const socials: Social[] = [
     { name: 'facebook', url: facebookUrl.url, icon: faFacebook },
     { name: 'instagram', url: instagramUrl.url, icon: faInstagram },
-    { name: 'telegram', url: telegramUrl.url, icon: faTelegram },
-    { name: 'twitter', url: twitterUrl.url, icon: faXTwitter },
+    // { name: 'telegram', url: telegramUrl.url, icon: faTelegram },
+    // { name: 'twitter', url: twitterUrl.url, icon: faXTwitter },
   ];
 
-  return { phones, socials };
+  return { mail, phones, socials };
 };

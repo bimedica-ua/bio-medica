@@ -6,7 +6,7 @@ import { getFromApi, transformSocials } from '@/apiGetter';
 import { CONSTANTS } from '@/constants';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
-type SocialsData = { phones: string[]; socials: Social[] };
+export type SocialsData = { mail:string; phones: string[]; socials: Social[] };
 
 export type Social = {
   name: string;
@@ -15,15 +15,18 @@ export type Social = {
 };
 
 export const SocialsContext = createContext<{
+  mail:string;
   phones: string[];
   socials: Social[];
 }>({
+  mail:'',
   phones: [],
   socials: [],
 });
 
 function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
   const [socials, setSocials] = useState<SocialsData>({
+    mail: '',
     phones: [],
     socials: [],
   });
