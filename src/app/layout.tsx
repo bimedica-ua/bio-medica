@@ -10,8 +10,8 @@ config.autoAddCss = false;
 const inter = Inter({ subsets: ['cyrillic'] });
 
 export const metadata: Metadata = {
-  title: 'Bio Medica',
-  description: 'Центр лабораторної медицини',
+  title: 'Bio Medica - дивитись аналізи онлайн',
+  description: 'Центр лабораторної медицини в Запоріжжі та інших містах країни',
 };
 
 export default function RootLayout({
